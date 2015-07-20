@@ -1,0 +1,15 @@
+<h3>
+  CREATURE
+</h3>
+
+<%= link_to "&larr; back".html_safe, creatures_path, :class=>"btn btn-primary btn-xs back" %>
+
+  <div class="well">
+    <p><span class = "creatures">
+      Name: <%= @creature.name %></span> |
+      Posted At:  <%= @creature.created_at%>
+    </p>
+    <p>Description: <%= @creature.description %></p>
+
+
+  </div>

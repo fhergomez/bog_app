@@ -1,0 +1,18 @@
+<div class="col-xs-4 col-sm-6 col-md-8 col-lg-12">
+<%= link_to "", new_creature_path, class: 'btn btn-primary btn-xs glyphicon glyphicon-plus pull-right' %>
+<h1>Bog creatures</h1>
+
+
+  <% @creatures.each do |creature| %>
+    <div class="well">
+    <p class="creatures">Name: <%= creature.name %></p>
+    <p>Description: <%= creature.description %></p>
+
+    <%= link_to "Show", creature, :class=>"btn btn-primary btn-xs" %>
+    <%= link_to " Edit", edit_creature_path(creature), class: 'btn btn-primary btn-xs glyphicon glyphicon-pencil pull-right' %>
+    <%= link_to " Destroy", creature, method: :delete, class: 'btn btn-danger btn-xs glyphicon glyphicon-trash pull-right', data: { confirm: 'Are you sure?' } %>
+  </div>
+  <% end %>
+
+</div>
+
