@@ -1,6 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: url('images/bg.jpg') center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .nav_bar {
   padding: 10px;
 }

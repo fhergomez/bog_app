@@ -3,6 +3,7 @@
 </h3>
 
 <%= link_to "&larr; back".html_safe, creatures_path, :class=>"btn btn-primary btn-xs back" %>
+<%= link_to "", new_creature_path, class: 'btn btn-primary btn-xs glyphicon glyphicon-plus pull-right' %>
 
   <div class="well">
     <p><span class = "creatures">
@@ -10,6 +11,14 @@
       Posted At:  <%= @creature.created_at%>
     </p>
     <p>Description: <%= @creature.description %></p>
+    <div>
+        <h5>Tags</h5>
+          <ul>
+          <% @tags.each do |tag| %>
+            <li><%= tag.name %></li>
+          <% end %>
+          </ul>
+        </div>
 
 
   </div>

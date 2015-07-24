@@ -1,0 +1,13 @@
+
+
+
+
+
+
+<h2>#<%= @tag.name %><%= link_to " Destroy", @tag, method: :delete, class: 'btn btn-danger btn-xs glyphicon glyphicon-trash pull-right', data: { confirm: 'Are you sure?' } %></h2>
+
+<% @tag.creatures.each do |creature| %>
+<div class="well">
+  <%= link_to creature.name, creature %>
+</div>
+<% end %>
